@@ -10,6 +10,8 @@ For my project, I gathered data from Roboflow, which included TXT annotations an
 ## Data Collection
 For the modeling component, I experimented with various versions of the YOLOv8 CNN, including nano, small, medium, and large models. I also tested different batch sizes and early stopping methods, using optimizers such as Adam, AdamW, and SGD. The best results were achieved with the YOLOv8 large model, a batch size of 16, and the AdamW optimizer. The training process took approximately 6 hours, utilizing Python 3.10.13 and YOLO from Ultralytics.
 
+Original Dataset can be found here : https://universe.roboflow.com/food-recipe-ingredient-images-0gnku/food-ingredients-dataset/dataset/4
+
 ## Model Evaluation
 
 - **Losses**:
