@@ -1,5 +1,5 @@
 # Recipe Suggestion
-Detects ingredients in food images using deep learning. Suggests recipes based on detected ingredients matched with a database of 100K+ recipes.
+Detects ingredients in food images using deep learning. Suggests recipes based on detected ingredients matched with a database of 100K+ recipes. 
 
 ## Project goal/Motivation
 Food waste is a significant global issue, with an estimated one-third of all food produced worldwide being wasted. This waste occurs at various stages, from production and transportation to retail and consumer levels. At the household level, a significant portion of food waste arises due to poor planning, over-purchasing, and a lack of knowledge on how to utilize available ingredients effectively. Additionally, many people enjoy cooking but often struggle with finding inspiration or new recipes to try, leading them to rely on takeout or prepared foods, which can contribute to unhealthy eating habits and further waste. By leveraging machine learning and computer vision, the project aims to create a tool that can reduce food faste, enhance the cooking experience and promote healthy eating.
@@ -49,4 +49,4 @@ The overall impression from the human evaluators was that the model provided goo
 
 ## How To Run The App Locally
 
-To run the app locally, first clone the project repository to your local machine. Once cloned, navigate to the project directory and run the following command in the terminal: streamlit run app.py. The application will automatically open in your default web browser. To test the model, input images in the input\test directory. There are already some out-of-sample images in this directory that were used to test the model.
+To run the app locally, first clone the project repository to your local machine. Once cloned, navigate to the project directory and create a virtual environment. For this project, version 3.12.1 of Python was used, but other versions may also work. After activating the virtual environment, execute the command streamlit run app.py in the terminal. This will launch the application, and the page will automatically open in your default web browser. To test the model, input test images into the input\test directory. There are already some out-of-sample images in this directory that were used to test the model.
