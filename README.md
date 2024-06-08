@@ -1,0 +1,44 @@
+# Recipe Suggestion
+Detects ingredients in food images using deep learning. Suggests recipes based on detected ingredients matched with a database of 100K+ recipes.
+
+## Project goal/Motivation
+Food waste is a significant global issue, with an estimated one-third of all food produced worldwide being wasted. This waste occurs at various stages, from production and transportation to retail and consumer levels. At the household level, a significant portion of food waste arises due to poor planning, over-purchasing, and a lack of knowledge on how to utilize available ingredients effectively. Additionally, many people enjoy cooking but often struggle with finding inspiration or new recipes to try, leading them to rely on takeout or prepared foods, which can contribute to unhealthy eating habits and further waste. By leveraging machine learning and computer vision, the project aims to create a tool that can reduce food faste, enhance the cooking experience and promote healthy eating.
+
+## Data Collection
+For my project, I gathered data from Roboflow, which included TXT annotations and a YAML configuration file for use with YOLOv8. I reviewed the data to ensure it was accurate and cleaned it up where needed. This involved checking the annotations and making any necessary corrections to improve the dataset's quality for both training and validation.
+
+## Modeling
+For the modeling component, I experimented with various versions of the YOLOv8 CNN, including nano, small, medium, and large models. I also tested different batch sizes and early stopping methods, using optimizers such as Adam, AdamW, and SGD. The best results were achieved with the YOLOv8 large model, a batch size of 16, and the AdamW optimizer. The training process took approximately 6 hours, utilizing Python 3.10.13 and YOLO from Ultralytics.
+
+Original Dataset: https://universe.roboflow.com/food-recipe-ingredient-images-0gnku/food-ingredients-dataset/dataset/4
+Ultralytics: https://github.com/ultralytics/ultralytics
+
+The notebook that was used to train the model is in this repository. Import it to Kaggle to try it yourself or simply follow this link: https://www.kaggle.com/code/gitspenv/recipe-suggestion
+
+## Model Evaluation
+
+- **Losses**:
+  - Box Loss: 0.37159
+  - Class Loss: 0.23461
+  - DFL Loss: 0.96656
+
+- **Learning Rate**:
+  - pg0: 0.0000024138
+  - pg1: 0.0000024138
+  - pg2: 0.0000024138
+
+- **Metrics**:
+  - Precision (B): 0.6745
+  - Recall (B): 0.5495
+  - mAP50 (B): 0.6121
+  - mAP50-95 (B): 0.3750
+
+- **Model Efficiency**:
+  - Parameters: 43,722,360
+  - GFLOPs: 165.915
+  - Speed (PyTorch): 17.063 ms
+
+The train box loss is 0.3716, train classification loss is 0.2346, and train DFL loss is 0.9666, indicating a reasonably well-performing model during training. The precision score of 0.6745 and recall score of 0.5495 suggest that the model balances true positives and false negatives effectively. The mAP50 of 0.6121 and mAP50-95 of 0.3750 illustrate the model's effectiveness at various intersection-over-union thresholds.
+
+However, higher validation losses (box loss of 1.4717, classification loss of 1.5041, and DFL loss of 2.3609) indicate possible overfitting. The model was tested with several out-of-sample images, showing overall good performance but occasionally misclassifying round white objects as eggs or garlic. This suggests potential bias in the training data or the need for more diverse samples.
+The model performs well but could benefit from fine-tuning and addressing validation losses and misclassification issues for improved robustness and accuracy.
