@@ -16,7 +16,7 @@ Dataset on Kaggle: https://www.kaggle.com/datasets/gitspenv/food-images/data
 
 Ultralytics: https://github.com/ultralytics/ultralytics
 
-The notebook that was used to train the model is in this repository. Import it to Kaggle to try it yourself or simply follow this link: https://www.kaggle.com/code/gitspenv/recipe-suggestion
+The notebook that was used to train the model is in this repository. Import it to Kaggle to try it yourself or simply follow this link: https://www.kaggle.com/code/gitspenv/recipe-suggestion (Note: To run a notebook on Kaggle and utilize the available accelerators, you need to have an account.)
 
 ## Model Evaluation
 
