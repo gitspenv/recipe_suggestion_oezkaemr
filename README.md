@@ -8,7 +8,7 @@ Food waste is a significant global issue, with an estimated one-third of all foo
 For my project, I gathered data from Roboflow, which included TXT annotations and a YAML configuration file for use with YOLOv8. I reviewed the data to ensure it was accurate and cleaned it up where needed. This involved checking the annotations and making any necessary corrections to improve the dataset's quality for both training and validation.
 
 ## Modeling
-For the modeling component, I experimented with various versions of the YOLOv8 CNN, including nano, small, medium, and large models. I also tested different batch sizes and early stopping methods, using optimizers such as Adam, AdamW, and SGD. The best results were achieved with the YOLOv8 large model, a batch size of 16, and the AdamW optimizer with initial learning rate of 0.00008 and momentum of 0.9. The training process took approximately 6 hours, utilizing Python 3.10.13 and YOLO from Ultralytics.
+For the modeling component, I experimented with various versions of the YOLOv8 CNN, including nano, small, medium, and large models. YOLO was mainly chosen due to its accuracy and fast inference. I tested different batch sizes and early stopping methods, using optimizers such as Adam, AdamW, and SGD. The best results were achieved with the YOLOv8 large model, a batch size of 16, and the AdamW optimizer with initial learning rate of 0.00008 and momentum of 0.9. The training process took approximately 6 hours, utilizing Python 3.10.13 and YOLO from Ultralytics.
 
 Original Dataset: https://universe.roboflow.com/food-recipe-ingredient-images-0gnku/food-ingredients-dataset/dataset/4
 
